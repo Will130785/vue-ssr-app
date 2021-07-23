@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body, #app {
+  height: 100%;
+  width: 100%; }
+
+.main {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  text-align: center;
+  background-image: url(/publicassets/images/background-blur.d52ddca.jpg);
+  background-size: cover;
+  color: white; }
+  .main h1 {
+    font-weight: 100;
+    white-space: nowrap; }
+  .main li {
+    font-size: 20px;
+    padding: 5px; }
+  .main a {
+    color: white;
+    line-height: 4; }
+
+
+/*# sourceMappingURL=app.53ca6d4f1eaca842430d.js.map*/

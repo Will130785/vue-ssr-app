@@ -2,7 +2,13 @@
   "name": "vue-ssr-app",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development nodemon ./server.js",
+    "start": "npm run build && npm run start-server",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cross-env NODE_ENV=production webpack --config ./config/webpack.client.js --progress",
+    "build:server": "cross-env NODE_ENV=production webpack --config ./config/webpack.server.js --progress",
+    "start-server": "node server.js"
   },
   "author": "Will Constable",
   "license": "ISC",
