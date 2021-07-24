@@ -8,7 +8,7 @@
     "build": "npm run build:client && npm run build:server",
     "build:client": "cross-env NODE_ENV=production webpack --config ./config/webpack.client.js --progress",
     "build:server": "cross-env NODE_ENV=production webpack --config ./config/webpack.server.js --progress",
-    "start-server": "PORT=5000 node server.js"
+    "start-server": "node server.js"
   },
   "author": "Will Constable",
   "license": "ISC",
