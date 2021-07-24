@@ -28,7 +28,7 @@ if (process.env.NODE_ENV === 'development') {
   renderer = createRenderer(require('./dist/vue-ssr-server-bundle.json'))
 }
 
-app.get('*' , async (req, res) => {
+app.get(/^\/(about)?\/?$/, async (req, res) => {
   const context = {
     url: req.params['0'] || '/',
     state: {

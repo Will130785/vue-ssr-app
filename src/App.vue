@@ -24,5 +24,11 @@
                 title: 'title',
             })
         },
+        created () {
+          console.log('Server side')
+        },
+        mounted () {
+          console.log('Client side')
+        }
     };
 </script>
