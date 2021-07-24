@@ -4,7 +4,7 @@ const fs = require('fs')
 const vueServerRenderer = require('vue-server-renderer')
 const setupDevServer = require('./config/setup-dev-server')
 
-const port = 3000
+let port
 const app = express()
 
 const createRenderer = (bundle) =>
@@ -19,10 +19,12 @@ let renderer
 app.use('/public', express.static(path.resolve(__dirname, './dist')))
 
 if (process.env.NODE_ENV === 'development') {
+  port = 3000
   setupDevServer(app, (serverBundle) => {
     renderer = createRenderer(serverBundle)
   })
 } else {
+  port = 5000
   renderer = createRenderer(require('./dist/vue-ssr-server-bundle.json'))
 }
 
