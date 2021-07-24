@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === 'development') {
     renderer = createRenderer(serverBundle)
   })
 } else {
-  port = 5000
+  port = process.env.PORT
   renderer = createRenderer(require('./dist/vue-ssr-server-bundle.json'))
 }
 
